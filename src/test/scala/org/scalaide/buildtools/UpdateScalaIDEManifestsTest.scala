@@ -22,9 +22,7 @@ class UpdateScalaIDEManifestsTest {
     val sdtDebugManifest = new File(scalaIDERoot, "org.scala-ide.sdt.debug/META-INF/MANIFEST.MF")
 
     checkRequiredVersionInManifest(sdtCoreManifest, ScalaLangCompilerId, "2.10.2.v20130530-074427-VFINAL-60d462ef6e")
-    checkRequiredVersionInManifest(sdtCoreManifest, ScalaLangLibraryId, "2.10.2.v20130530-074427-VFINAL-60d462ef6e")
     checkRequiredVersionInManifest(sdtDebugManifest, ScalaLangCompilerId, "2.10.2.v20130530-074427-VFINAL-60d462ef6e")
-    checkRequiredVersionInManifest(sdtDebugManifest, ScalaLangLibraryId, "2.10.2.v20130530-074427-VFINAL-60d462ef6e")
   }
 
   @Test
@@ -37,10 +35,7 @@ class UpdateScalaIDEManifestsTest {
     val sdtDebugManifest = new File(scalaIDERoot, "org.scala-ide.sdt.debug/META-INF/MANIFEST.MF")
 
     checkRequiredVersionInManifest(sdtCoreManifest, ScalaLangCompilerId, "2.10.3.v20130924-143159-9f62900145")
-    checkRequiredVersionInManifest(sdtCoreManifest, ScalaLangLibraryId, "2.10.3.v20130924-143159-9f62900145")
     checkRequiredVersionInManifest(sdtDebugManifest, ScalaLangCompilerId, "2.10.3.v20130924-143159-9f62900145")
-    checkRequiredVersionInManifest(sdtDebugManifest, ScalaLangLibraryId, "2.10.3.v20130924-143159-9f62900145")
   }
-
 
 }

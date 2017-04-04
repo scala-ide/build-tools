@@ -13,7 +13,7 @@ object TestSupport {
   
   cleanTmpFolders()
 
-  final val resourcesFolder = new File(System.getProperty("user.dir"), "src/test/resources")
+  final val resourcesFolder = new File("src/test/resources")
   
   private def cleanTmpFolders() {
     val tmpFolder = new File("target/tmp-test/")
@@ -31,7 +31,8 @@ object TestSupport {
 
     for (folder <- baseFolders) {
       val newFolder = new File(tmpFolder, folder)
-      IOFileUtils.copyDirectory(new File(resourcesFolder, folder), newFolder)
+      val source = new File(resourcesFolder, folder)
+      IOFileUtils.copyDirectory(source, newFolder)
       result.append(newFolder)
     }
 
