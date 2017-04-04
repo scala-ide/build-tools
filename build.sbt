@@ -4,7 +4,7 @@ version := "0.5.3-SNAPSHOT"
 
 organization := "org.scala-ide"
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.12.1"
 
 publishMavenStyle := true
 
@@ -15,7 +15,7 @@ credentials += Credentials(Path.userHome / ".credentials")
 
 libraryDependencies ++= Seq(
   "org.osgi" % "org.osgi.core" % "4.3.0", 
-  "net.databinder.dispatch" %% "dispatch-core" % "0.11.2",
+  "net.databinder.dispatch" %% "dispatch-core" % "0.12.0",
   "com.typesafe" % "config" % "0.5.2",
   "junit" % "junit" % "4.8.1" % "test",
   "org.slf4j" % "slf4j-simple" % "1.6.4",

@@ -110,7 +110,9 @@ class UpdateScalaIDEManifests(scalaVersion: String, m2Repo: File, scalaIDERoot: 
   private def updateManifest(projectPath: String, scalaLibraryVersion: Version) {
     val projectFolder = new File(scalaIDERoot, projectPath)
     val manifestFile = new File(projectFolder, PluginManifest)
-    val templateFiles = new File(projectFolder, PluginManifestTemplatesLocation).listFiles().to[List].filterNot(_.getName.endsWith(".original"))
+    val templateFiles = Option(new File(projectFolder, PluginManifestTemplatesLocation).listFiles()).map {
+      _.to[List].filterNot(_.getName.endsWith(".original"))
+    }.getOrElse(Nil)
 
     val files = manifestFile :: templateFiles
 
